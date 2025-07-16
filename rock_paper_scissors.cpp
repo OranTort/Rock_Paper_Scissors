@@ -29,7 +29,8 @@ int main(){
 
     std::cout << "Do You Want to Continue(Y/N): ";
     std::cin >> cont;
-    }while(cont == 'Y' || cont == 'y');
+    cont = toupper(cont);
+    }while(cont == 'Y');
 
     system("pause");
 
@@ -48,6 +49,7 @@ char getUserChoice(){
         std::cout << "'p' for Paper\n";
         std::cout << "'s' for Scissors\n";
         std::cin >> player;
+        player = tolower(player);
     }while(player != 'r' && player != 'R' && player != 'p' && player != 'P' && player != 's' && player != 'S');
 
     std::cout << "*************************\n";
